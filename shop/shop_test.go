@@ -1,8 +1,13 @@
 package shop
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/keploy/go-sdk/v3/keploytest"
+)
 
 func TestUserName(t *testing.T) {
+	defer keploytest.T(t)()
 	name, err := UserName(1)
 	if err != nil {
 		t.Fatalf("UserName(1): %v", err)
@@ -13,6 +18,7 @@ func TestUserName(t *testing.T) {
 }
 
 func TestPrice(t *testing.T) {
+	defer keploytest.T(t)()
 	cents, err := Price("book")
 	if err != nil {
 		t.Fatalf("Price(book): %v", err)

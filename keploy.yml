@@ -1,0 +1,8 @@
+# What the coding agent writes for this project when the extension hands it
+# the setup: the test command keploy mock record|replay runs. -count=1: go
+# test would serve a package from its cache and report no test to keploy.
+mock:
+  name: shop-mwiafiys
+  command: go test -p 1 -count=1 -json ./...
+  appId: 13bb16c7-66ca-4d93-8d94-03f02f830a2f
+appName: vscode-onboarding-proof

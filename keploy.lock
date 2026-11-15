@@ -1,0 +1,17 @@
+# keploy.lock: the recordings `keploy mock replay` serves for this project, one immutable
+# recording per test, named by its sha256 (like an image digest). Written by `keploy mock record`:
+# commit it with your change. A `skip:` line under an entry is a test keploy does not replay,
+# and why; it applies only while it names its entry's digest, so a re-record runs the test again.
+# To skip a test, quarantine it (`keploy mock quarantine`); deleting its entry does not.
+# Never edit a digest: replay refuses one it cannot verify.
+version: 1
+
+shop::@startup:
+  digest: sha256:aed0767e4b8bd419b9698c5823a9ddf1a35a4d333079e2ca91499690fe14665f  # 2026-11-15T20:30Z linux keploy 3.8.130 at c40852c9758b (dirty)
+
+shop::shop::TestPrice:
+  digest: sha256:67f453f9e0a575e13c44216d003b869a1a82ab9e1b7081c8e38b12e3f1c7c023  # 2026-11-15T20:30Z linux keploy 3.8.130 at c40852c9758b (dirty)
+
+shop::shop::TestUserName:
+  digest: sha256:007bc2e5cb046366036f290721351eedf7b3437b663b6ab0953f06f39fb7bf64  # 2026-11-15T20:30Z linux keploy 3.8.130 at c40852c9758b (dirty)
+
